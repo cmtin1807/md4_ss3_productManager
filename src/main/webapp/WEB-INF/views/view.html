@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="layout::head">
+</head>
+<body>
+<h3>View Product</h3>
+<p>
+    <a th:href="@{/products}">
+        Back form list product
+    </a>
+</p>
+<table id="products">
+    <thead>
+    <tr>
+        <td>Name: </td>
+        <td th:text="${product.getName()}"></td>
+    </tr>
+    <tr>
+        <td>Price: </td>
+        <td th:text="${product.getPrice()}"></td>
+    </tr>
+    <tr>
+        <td>Description: </td>
+        <td th:text="${product.getDescription()}"></td>
+    </tr>
+    <tr>
+        <td>Company: </td>
+        <td th:text="${product.getCompany()}"></td>
+    </tr>
+    </thead>
+
+</table>
+
+<footer th:replace="layout::footer"></footer>
+</body>
+</html>
